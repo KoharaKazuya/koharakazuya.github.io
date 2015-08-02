@@ -6,7 +6,30 @@
     <language>ja-jp</language>
     <author>Kohara Kazuya</author>
     
-    <updated>Tue, 05 Nov 2013 00:00:00 JST</updated>
+    <updated>Sun, 02 Aug 2015 23:27:31 JST</updated>
+    
+    <item>
+      <title>Hugo のテーマ、Hugo Shelf を作った</title>
+      <link>http://koharakazuya.github.io/artifact/2015-08-02-hugo-shelf/</link>
+      <pubDate>Sun, 02 Aug 2015 23:27:31 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://koharakazuya.github.io/artifact/2015-08-02-hugo-shelf/</guid>
+      <description>&lt;p&gt;4 年前に作った自作テーマがダサく感じて 1 年ほど経過してたので、
+思い切って作りなおしました。
+以前は GitHub Pages がサポートしている &lt;a href=&#34;//jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;
+を使ってましたが、ページ生成が遅いのとシンプルさに欠けるため、
+&lt;a href=&#34;//gohugo.io&#34;&gt;Hugo&lt;/a&gt; に乗り換えました。&lt;/p&gt;
+
+&lt;p&gt;で、ついでに &lt;a href=&#34;//github.com/KoharaKazuya/HugoShelf&#34;&gt;Hugo Shelf&lt;/a&gt;
+というテーマも作りました。
+このページで使ってるテーマです。&lt;/p&gt;
+
+&lt;p&gt;「作ったもの」と「メモ」という分け方にしか使えないからダメですね……。&lt;/p&gt;
+</description>
+      <images>
+        <url>//gohugo.io/img/hugo.png</url>
+      </images>
+    </item>
     
     <item>
       <title>Alfred 用の Todo.txt 連携ワークフローを作った</title>
@@ -44,7 +67,7 @@ Alfred のせっかくの機能を十分に活かしきれていなかったみ�
 &lt;p&gt;&lt;a href=&#34;http://koharakazuya.github.io/bin/Todo.txt.alfredworkflow&#34;&gt;&lt;em&gt;Download&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
       <images>
-        <url>//www.alfredapp.com//images/logo.png</url>
+        <url>//www.alfredapp.com/images/logo.png</url>
       </images>
     </item>
     
