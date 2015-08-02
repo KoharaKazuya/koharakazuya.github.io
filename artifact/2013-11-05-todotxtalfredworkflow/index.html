@@ -1,0 +1,65 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/header.css">
+<link rel="stylesheet" href="/styles/footer.css">
+<link rel="stylesheet" href="/styles/preview-line.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="alternate" type="application/rss+xml" href="/index.xml" />
+<title>Kohara&#39;s Page</title>
+
+
+<header>
+  <div class="head-bar">
+    <div class="title-background">
+      <a href="/"><h1>Kohara&#39;s Page</h1></a>
+    </div>
+  </div>
+</header>
+
+
+<article class="page">
+  <header>
+    <h1>
+      Alfred 用の Todo.txt 連携ワークフローを作った
+      <span class="date">2013/11/5</span>
+    </h1>
+  </header>
+  <main>
+    <p><a href="http://www.alfredapp.com/">Alfred</a> といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。
+無料版は機能制限されているんだけど、先日我慢できずにライセンスを購入。
+約 2,700 円だったけど、後悔は（まだ）していない。</p>
+
+<p>せっかく買ったんだから開放された機能をガッツリ弄っていたら、<a href="http://todotxt.com/">Todo.txt</a> を Alfred から操作したくなった。
+Todo.txt は TODO 管理データをテキストで扱うってところが味噌のアプリ。
+Web サービス利用系はサービスが終了すれば消えるし、他のバイナリでデータ管理しているアプリもエクスポートが面倒。
+将来的にずっと使える保証があるのはテキストデータだけでしょ、ってことで使ってます。
+<strong>なにより CLI があるのが一番ですが。</strong></p>
+
+<p>Todo.txt を扱う Alfred Workflow は<a href="https://github.com/madc/alfred-todotxt">既にあるっぽい</a>ですが、
+Alfred のせっかくの機能を十分に活かしきれていなかったみたいなので、
+自分で作ることにしました。ただのシェルスクリプトだし。</p>
+
+<p>シンプルなラッパーとして<code>todo add test</code>→通知、みたいなこともできますが、
+<code>add</code>,<code>do</code>,<code>list</code>に対して特化したコマンドを追加してます。</p>
+
+<p><img src="/images/2013-11-05-todotxtalfredworkflow.png" alt="Alfred 上から Todo.txt のタスクを表示" /></p>
+
+<p>こんな感じに。
+<code>todo</code>がただのラッパー。
+<code>to [task]</code>で新規タスクの追加。
+<code>list</code>で現在のタスクの確認。
+<code>done [task_number]</code>でタスクの完了が出来ます。</p>
+
+<p>もし良かったら使って見て下さい。</p>
+
+<p><a href="/bin/Todo.txt.alfredworkflow"><em>Download</em></a></p>
+
+  </main>
+</article>
+
+<footer>
+  <p><small>© 2015 Kohara Kazuya. All Rights Reserved.</small></p>
+</footer>
+

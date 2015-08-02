@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kohara&#39;s Page </title>
+    <link>http://localhost:1313/artifact/</link>
+    <language>ja-jp</language>
+    <author>Kohara Kazuya</author>
+    
+    <updated>Tue, 05 Nov 2013 00:00:00 JST</updated>
+    
+    <item>
+      <title>Alfred 用の Todo.txt 連携ワークフローを作った</title>
+      <link>http://localhost:1313/artifact/2013-11-05-todotxtalfredworkflow/</link>
+      <pubDate>Tue, 05 Nov 2013 00:00:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://localhost:1313/artifact/2013-11-05-todotxtalfredworkflow/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred&lt;/a&gt; といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。
+無料版は機能制限されているんだけど、先日我慢できずにライセンスを購入。
+約 2,700 円だったけど、後悔は（まだ）していない。&lt;/p&gt;
+
+&lt;p&gt;せっかく買ったんだから開放された機能をガッツリ弄っていたら、&lt;a href=&#34;http://todotxt.com/&#34;&gt;Todo.txt&lt;/a&gt; を Alfred から操作したくなった。
+Todo.txt は TODO 管理データをテキストで扱うってところが味噌のアプリ。
+Web サービス利用系はサービスが終了すれば消えるし、他のバイナリでデータ管理しているアプリもエクスポートが面倒。
+将来的にずっと使える保証があるのはテキストデータだけでしょ、ってことで使ってます。
+&lt;strong&gt;なにより CLI があるのが一番ですが。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Todo.txt を扱う Alfred Workflow は&lt;a href=&#34;https://github.com/madc/alfred-todotxt&#34;&gt;既にあるっぽい&lt;/a&gt;ですが、
+Alfred のせっかくの機能を十分に活かしきれていなかったみたいなので、
+自分で作ることにしました。ただのシェルスクリプトだし。&lt;/p&gt;
+
+&lt;p&gt;シンプルなラッパーとして&lt;code&gt;todo add test&lt;/code&gt;→通知、みたいなこともできますが、
+&lt;code&gt;add&lt;/code&gt;,&lt;code&gt;do&lt;/code&gt;,&lt;code&gt;list&lt;/code&gt;に対して特化したコマンドを追加してます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2013-11-05-todotxtalfredworkflow.png&#34; alt=&#34;Alfred 上から Todo.txt のタスクを表示&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;こんな感じに。
+&lt;code&gt;todo&lt;/code&gt;がただのラッパー。
+&lt;code&gt;to [task]&lt;/code&gt;で新規タスクの追加。
+&lt;code&gt;list&lt;/code&gt;で現在のタスクの確認。
+&lt;code&gt;done [task_number]&lt;/code&gt;でタスクの完了が出来ます。&lt;/p&gt;
+
+&lt;p&gt;もし良かったら使って見て下さい。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/bin/Todo.txt.alfredworkflow&#34;&gt;&lt;em&gt;Download&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+      <images>
+        <url>//www.alfredapp.com//images/logo.png</url>
+      </images>
+    </item>
+    
+  </channel>
+</rss>

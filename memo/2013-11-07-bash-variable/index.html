@@ -1,0 +1,56 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/header.css">
+<link rel="stylesheet" href="/styles/footer.css">
+<link rel="stylesheet" href="/styles/preview-line.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="alternate" type="application/rss+xml" href="/index.xml" />
+<title>Kohara&#39;s Page</title>
+
+
+<header>
+  <div class="head-bar">
+    <div class="title-background">
+      <a href="/"><h1>Kohara&#39;s Page</h1></a>
+    </div>
+  </div>
+</header>
+
+
+<article class="page">
+  <header>
+    <h1>
+      Bash での変数展開の落とし穴
+      <span class="date">2013/11/7</span>
+    </h1>
+  </header>
+  <main>
+    <p>変数を使った grep の何気ないコード。</p>
+
+<pre><code>filter='&quot;^ abc&quot;'
+echo &quot; abc&quot; | grep -e $filter
+</code></pre>
+
+<p>何事も無く、<code>abc</code>と出力されるかとおもいきや何も出力されない。
+さっきこれにハマった。</p>
+
+<p>このスクリプトの二行目、<code>$filter</code>を展開すると<code>echo &quot; abc&quot; | grep -e &quot;^ abc&quot;</code>となるように見える。
+だから grep の引数には<code>^ abc</code>が渡されているはず、と思い込んでいたのだが実は違うらしい。
+実際は<code>&quot;^</code>と<code>abc&quot;</code>が渡されている（もちろん<code>-e</code>も）。
+シェルがダブルクォーテーションを処理していない。
+他にもバックスラッシュや（恐らく）ワイルドカードなども処理されない。</p>
+
+<p>なんなんだーと思うけど、ダブルクォーテーションやバックスラッシュの処理は
+変数展開の前に行うのだろうと推測。</p>
+
+<p>素直に<code>eval</code>使いましょう。</p>
+
+  </main>
+</article>
+
+<footer>
+  <p><small>© 2015 Kohara Kazuya. All Rights Reserved.</small></p>
+</footer>
+

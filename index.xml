@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kohara&#39;s Page </title>
+    <link>http://localhost:1313/</link>
+    <language>ja-jp</language>
+    <author>Kohara Kazuya</author>
+    
+    <updated>Tue, 14 Jan 2014 00:00:00 JST</updated>
+    
+    <item>
+      <title>Google Chrome で新規タブで表示されるページを自作ページに置き換える方法</title>
+      <link>http://localhost:1313/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</link>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://localhost:1313/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</guid>
+      <description>
+
+&lt;h2 id=&#34;前置き:8ee40215577c19d6b74be1480b779a9a&#34;&gt;前置き&lt;/h2&gt;
+
+&lt;p&gt;Google Chrome は新しいタブを開いた時にとあるページが表示されます。
+検索ボックスがあるし最近良く使うページも表示されてそれなりに便利です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_default.png&#34; alt=&#34;Google Chrome の新規タブを開いた時に表示されるページ&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;しかしカスタマイズしたいと思うのがお年頃。
+&lt;a href=&#34;http://speeddial2.com/&#34;&gt;Speed dial 2&lt;/a&gt; などのカスタマイズできる拡張はあるけれど、もっともっと深いところまでカスタマイズしたい、そう思うのは僕だけでしょうか？&lt;/p&gt;
+
+&lt;p&gt;色々な拡張を試しました。
+どれも手軽に利用できて、カッコイイし、便利なんだけどもちょっとずつ不満がありました。
+上記の Speed dial 2 が一番利用したかったんだけど、同期機能は有料なんですよねー。&lt;/p&gt;
+
+&lt;p&gt;そうだ、&lt;strong&gt;自分で HTML 書けばいいじゃないか！&lt;/strong&gt; と思い至り、Dropbox + &lt;a href=&#34;https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna&#34;&gt;New Tab Redirect!&lt;/a&gt; で同期できる自分好みのページに置き換えました。
+しかしコレにも欠点が。
+検索に利用するオムニボックス (上部の URL が表示されるところ) に余計な URL が残っちゃうんです。&lt;/p&gt;
+
+&lt;p&gt;じゃあ拡張にしちゃえと思って調べてみたら、思ったより簡単だったので、この記事です。
+Google Chrome は拡張が書きやすい、デバッグがしやすいという点が大好きです。&lt;/p&gt;
+
+&lt;h2 id=&#34;機能:8ee40215577c19d6b74be1480b779a9a&#34;&gt;機能&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google Chrome の新規タブのページを自分で書いた HTML のページに置き換えられます&lt;/li&gt;
+&lt;li&gt;オムニボックスに余計な URL は表示されません&lt;/li&gt;
+&lt;li&gt;(Dropbox などを使えば同期できます)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;方法:8ee40215577c19d6b74be1480b779a9a&#34;&gt;方法&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;自前で表示したいページ&lt;code&gt;index.html&lt;/code&gt;というファイル名で作成します&lt;/li&gt;
+&lt;li&gt;作ったファイルを適当なディレクトリにつっこみます (Dropbox なんかがおすすめ)&lt;/li&gt;
+&lt;li&gt;そのディレクトリ直下に下記のファイルを&lt;code&gt;manifest.json&lt;/code&gt;というファイル名で保存します&lt;/li&gt;
+&lt;li&gt;Google Chrome の拡張機能のページ (chrome://extensions) からディベロッパーモードを選択&lt;/li&gt;
+&lt;li&gt;「パッケージ化されていない拡張機能を読み込む」で作ったディレクトリを選択&lt;/li&gt;
+&lt;li&gt;新規タブを開く&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;manifest-json:8ee40215577c19d6b74be1480b779a9a&#34;&gt;manifest.json&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;manifest_version&amp;quot;: 2,
+  &amp;quot;name&amp;quot;: &amp;quot;My customized new tab page&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;Override the new tab page with my page&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.1&amp;quot;,
+  &amp;quot;chrome_url_overrides&amp;quot;: {
+    &amp;quot;newtab&amp;quot;: &amp;quot;index.html&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;説明画像:8ee40215577c19d6b74be1480b779a9a&#34;&gt;説明画像&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_extension.png&#34; alt=&#34;拡張の読み込み方法の説明&#34; /&gt;&lt;/p&gt;
+</description>
+      <images>
+        <url>http://localhost:1313/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_default.png</url>
+      </images>
+    </item>
+    
+    <item>
+      <title>Bash での変数展開の落とし穴</title>
+      <link>http://localhost:1313/memo/2013-11-07-bash-variable/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://localhost:1313/memo/2013-11-07-bash-variable/</guid>
+      <description>&lt;p&gt;変数を使った grep の何気ないコード。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;filter=&#39;&amp;quot;^ abc&amp;quot;&#39;
+echo &amp;quot; abc&amp;quot; | grep -e $filter
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;何事も無く、&lt;code&gt;abc&lt;/code&gt;と出力されるかとおもいきや何も出力されない。
+さっきこれにハマった。&lt;/p&gt;
+
+&lt;p&gt;このスクリプトの二行目、&lt;code&gt;$filter&lt;/code&gt;を展開すると&lt;code&gt;echo &amp;quot; abc&amp;quot; | grep -e &amp;quot;^ abc&amp;quot;&lt;/code&gt;となるように見える。
+だから grep の引数には&lt;code&gt;^ abc&lt;/code&gt;が渡されているはず、と思い込んでいたのだが実は違うらしい。
+実際は&lt;code&gt;&amp;quot;^&lt;/code&gt;と&lt;code&gt;abc&amp;quot;&lt;/code&gt;が渡されている（もちろん&lt;code&gt;-e&lt;/code&gt;も）。
+シェルがダブルクォーテーションを処理していない。
+他にもバックスラッシュや（恐らく）ワイルドカードなども処理されない。&lt;/p&gt;
+
+&lt;p&gt;なんなんだーと思うけど、ダブルクォーテーションやバックスラッシュの処理は
+変数展開の前に行うのだろうと推測。&lt;/p&gt;
+
+&lt;p&gt;素直に&lt;code&gt;eval&lt;/code&gt;使いましょう。&lt;/p&gt;
+</description>
+      <images>
+        <url>http://localhost:1313/images/2013-11-07-bash-variable.png</url>
+      </images>
+    </item>
+    
+    <item>
+      <title>Alfred 用の Todo.txt 連携ワークフローを作った</title>
+      <link>http://localhost:1313/artifact/2013-11-05-todotxtalfredworkflow/</link>
+      <pubDate>Tue, 05 Nov 2013 00:00:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://localhost:1313/artifact/2013-11-05-todotxtalfredworkflow/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred&lt;/a&gt; といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。
+無料版は機能制限されているんだけど、先日我慢できずにライセンスを購入。
+約 2,700 円だったけど、後悔は（まだ）していない。&lt;/p&gt;
+
+&lt;p&gt;せっかく買ったんだから開放された機能をガッツリ弄っていたら、&lt;a href=&#34;http://todotxt.com/&#34;&gt;Todo.txt&lt;/a&gt; を Alfred から操作したくなった。
+Todo.txt は TODO 管理データをテキストで扱うってところが味噌のアプリ。
+Web サービス利用系はサービスが終了すれば消えるし、他のバイナリでデータ管理しているアプリもエクスポートが面倒。
+将来的にずっと使える保証があるのはテキストデータだけでしょ、ってことで使ってます。
+&lt;strong&gt;なにより CLI があるのが一番ですが。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Todo.txt を扱う Alfred Workflow は&lt;a href=&#34;https://github.com/madc/alfred-todotxt&#34;&gt;既にあるっぽい&lt;/a&gt;ですが、
+Alfred のせっかくの機能を十分に活かしきれていなかったみたいなので、
+自分で作ることにしました。ただのシェルスクリプトだし。&lt;/p&gt;
+
+&lt;p&gt;シンプルなラッパーとして&lt;code&gt;todo add test&lt;/code&gt;→通知、みたいなこともできますが、
+&lt;code&gt;add&lt;/code&gt;,&lt;code&gt;do&lt;/code&gt;,&lt;code&gt;list&lt;/code&gt;に対して特化したコマンドを追加してます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2013-11-05-todotxtalfredworkflow.png&#34; alt=&#34;Alfred 上から Todo.txt のタスクを表示&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;こんな感じに。
+&lt;code&gt;todo&lt;/code&gt;がただのラッパー。
+&lt;code&gt;to [task]&lt;/code&gt;で新規タスクの追加。
+&lt;code&gt;list&lt;/code&gt;で現在のタスクの確認。
+&lt;code&gt;done [task_number]&lt;/code&gt;でタスクの完了が出来ます。&lt;/p&gt;
+
+&lt;p&gt;もし良かったら使って見て下さい。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/bin/Todo.txt.alfredworkflow&#34;&gt;&lt;em&gt;Download&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+      <images>
+        <url>//www.alfredapp.com//images/logo.png</url>
+      </images>
+    </item>
+    
+    <item>
+      <title>似たようなアプリ、サービスを探してくれる AlternativeTo</title>
+      <link>http://localhost:1313/memo/2013-10-05-alternativeto/</link>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://localhost:1313/memo/2013-10-05-alternativeto/</guid>
+      <description>&lt;p&gt;MacBook Air を使うようになってから特にお世話になっている Web サービス
+&amp;ldquo;AlternativeTo&amp;rdquo;の紹介。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://alternativeto.net/&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/2013-10-05-alternativeto.png&#34; alt=&#34;AlternativeTo Logo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;AlternativeTo は似たようなアプリやサービスを探してくれる Web サービスです。
+例えば&amp;rdquo;Google Chrome&amp;rdquo;で検索すると&amp;rdquo;Firefox&amp;rdquo;や&amp;rdquo;Opera&amp;rdquo;をリストアップしてくれます。
+これがどういう時に便利かというと、あるアプリが便利そう！と思った時に、
+導入する前に AlternativeTo でサクッと調べて同様のもっと自分にあったアプリが
+ないか調べられます。&lt;/p&gt;
+
+&lt;p&gt;自分は特に Windows から Mac に移行した際に
+「Windows ならこういうアプリが便利だったなぁ」
+と思った時に調べられて便利でした。&lt;/p&gt;
+
+&lt;p&gt;OS 別や無料かどうかで絞込ができ、更に&amp;rdquo;like&amp;rdquo;の数でソートができるので、
+使い勝手はかなりいいです。&lt;/p&gt;
+
+&lt;p&gt;いろんなアプリを試す方は是非どうぞ。&lt;/p&gt;
+</description>
+      <images>
+        <url>http://localhost:1313/images/2013-10-05-alternativeto.png</url>
+      </images>
+    </item>
+    
+  </channel>
+</rss>

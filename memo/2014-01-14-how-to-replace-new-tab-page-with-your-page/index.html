@@ -1,0 +1,95 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/header.css">
+<link rel="stylesheet" href="/styles/footer.css">
+<link rel="stylesheet" href="/styles/preview-line.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="alternate" type="application/rss+xml" href="/index.xml" />
+<title>Kohara&#39;s Page</title>
+
+
+<header>
+  <div class="head-bar">
+    <div class="title-background">
+      <a href="/"><h1>Kohara&#39;s Page</h1></a>
+    </div>
+  </div>
+</header>
+
+
+<article class="page">
+  <header>
+    <h1>
+      Google Chrome で新規タブで表示されるページを自作ページに置き換える方法
+      <span class="date">2014/1/14</span>
+    </h1>
+  </header>
+  <main>
+    
+
+<h2 id="前置き:8ee40215577c19d6b74be1480b779a9a">前置き</h2>
+
+<p>Google Chrome は新しいタブを開いた時にとあるページが表示されます。
+検索ボックスがあるし最近良く使うページも表示されてそれなりに便利です。</p>
+
+<p><img src="/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_default.png" alt="Google Chrome の新規タブを開いた時に表示されるページ" /></p>
+
+<p>しかしカスタマイズしたいと思うのがお年頃。
+<a href="http://speeddial2.com/">Speed dial 2</a> などのカスタマイズできる拡張はあるけれど、もっともっと深いところまでカスタマイズしたい、そう思うのは僕だけでしょうか？</p>
+
+<p>色々な拡張を試しました。
+どれも手軽に利用できて、カッコイイし、便利なんだけどもちょっとずつ不満がありました。
+上記の Speed dial 2 が一番利用したかったんだけど、同期機能は有料なんですよねー。</p>
+
+<p>そうだ、<strong>自分で HTML 書けばいいじゃないか！</strong> と思い至り、Dropbox + <a href="https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna">New Tab Redirect!</a> で同期できる自分好みのページに置き換えました。
+しかしコレにも欠点が。
+検索に利用するオムニボックス (上部の URL が表示されるところ) に余計な URL が残っちゃうんです。</p>
+
+<p>じゃあ拡張にしちゃえと思って調べてみたら、思ったより簡単だったので、この記事です。
+Google Chrome は拡張が書きやすい、デバッグがしやすいという点が大好きです。</p>
+
+<h2 id="機能:8ee40215577c19d6b74be1480b779a9a">機能</h2>
+
+<ul>
+<li>Google Chrome の新規タブのページを自分で書いた HTML のページに置き換えられます</li>
+<li>オムニボックスに余計な URL は表示されません</li>
+<li>(Dropbox などを使えば同期できます)</li>
+</ul>
+
+<h2 id="方法:8ee40215577c19d6b74be1480b779a9a">方法</h2>
+
+<ol>
+<li>自前で表示したいページ<code>index.html</code>というファイル名で作成します</li>
+<li>作ったファイルを適当なディレクトリにつっこみます (Dropbox なんかがおすすめ)</li>
+<li>そのディレクトリ直下に下記のファイルを<code>manifest.json</code>というファイル名で保存します</li>
+<li>Google Chrome の拡張機能のページ (chrome://extensions) からディベロッパーモードを選択</li>
+<li>「パッケージ化されていない拡張機能を読み込む」で作ったディレクトリを選択</li>
+<li>新規タブを開く</li>
+</ol>
+
+<h3 id="manifest-json:8ee40215577c19d6b74be1480b779a9a">manifest.json</h3>
+
+<pre><code>{
+  &quot;manifest_version&quot;: 2,
+  &quot;name&quot;: &quot;My customized new tab page&quot;,
+  &quot;description&quot;: &quot;Override the new tab page with my page&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;chrome_url_overrides&quot;: {
+    &quot;newtab&quot;: &quot;index.html&quot;
+  }
+}
+</code></pre>
+
+<h3 id="説明画像:8ee40215577c19d6b74be1480b779a9a">説明画像</h3>
+
+<p><img src="/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_extension.png" alt="拡張の読み込み方法の説明" /></p>
+
+  </main>
+</article>
+
+<footer>
+  <p><small>© 2015 Kohara Kazuya. All Rights Reserved.</small></p>
+</footer>
+
