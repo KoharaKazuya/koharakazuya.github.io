@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kohara&#39;s Page </title>
-    <link>http://localhost:1313/memo/</link>
+    <link>http://koharakazuya.github.io/memo/</link>
     <language>ja-jp</language>
     <author>Kohara Kazuya</author>
     
@@ -10,10 +10,10 @@
     
     <item>
       <title>Google Chrome で新規タブで表示されるページを自作ページに置き換える方法</title>
-      <link>http://localhost:1313/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</link>
+      <link>http://koharakazuya.github.io/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
-      <guid>http://localhost:1313/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</guid>
+      <guid>http://koharakazuya.github.io/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</guid>
       <description>
 
 &lt;h2 id=&#34;前置き:8ee40215577c19d6b74be1480b779a9a&#34;&gt;前置き&lt;/h2&gt;
@@ -21,7 +21,7 @@
 &lt;p&gt;Google Chrome は新しいタブを開いた時にとあるページが表示されます。
 検索ボックスがあるし最近良く使うページも表示されてそれなりに便利です。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_default.png&#34; alt=&#34;Google Chrome の新規タブを開いた時に表示されるページ&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://koharakazuya.github.io/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_default.png&#34; alt=&#34;Google Chrome の新規タブを開いた時に表示されるページ&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;しかしカスタマイズしたいと思うのがお年頃。
 &lt;a href=&#34;http://speeddial2.com/&#34;&gt;Speed dial 2&lt;/a&gt; などのカスタマイズできる拡張はあるけれど、もっともっと深いところまでカスタマイズしたい、そう思うのは僕だけでしょうか？&lt;/p&gt;
@@ -71,19 +71,19 @@ Google Chrome は拡張が書きやすい、デバッグがしやすいという
 
 &lt;h3 id=&#34;説明画像:8ee40215577c19d6b74be1480b779a9a&#34;&gt;説明画像&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_extension.png&#34; alt=&#34;拡張の読み込み方法の説明&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://koharakazuya.github.io/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_extension.png&#34; alt=&#34;拡張の読み込み方法の説明&#34; /&gt;&lt;/p&gt;
 </description>
       <images>
-        <url>http://localhost:1313/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_default.png</url>
+        <url>http://koharakazuya.github.io/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_default.png</url>
       </images>
     </item>
     
     <item>
       <title>Bash での変数展開の落とし穴</title>
-      <link>http://localhost:1313/memo/2013-11-07-bash-variable/</link>
+      <link>http://koharakazuya.github.io/memo/2013-11-07-bash-variable/</link>
       <pubDate>Thu, 07 Nov 2013 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
-      <guid>http://localhost:1313/memo/2013-11-07-bash-variable/</guid>
+      <guid>http://koharakazuya.github.io/memo/2013-11-07-bash-variable/</guid>
       <description>&lt;p&gt;変数を使った grep の何気ないコード。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;filter=&#39;&amp;quot;^ abc&amp;quot;&#39;
@@ -105,20 +105,20 @@ echo &amp;quot; abc&amp;quot; | grep -e $filter
 &lt;p&gt;素直に&lt;code&gt;eval&lt;/code&gt;使いましょう。&lt;/p&gt;
 </description>
       <images>
-        <url>http://localhost:1313/images/2013-11-07-bash-variable.png</url>
+        <url>http://koharakazuya.github.io/images/2013-11-07-bash-variable.png</url>
       </images>
     </item>
     
     <item>
       <title>似たようなアプリ、サービスを探してくれる AlternativeTo</title>
-      <link>http://localhost:1313/memo/2013-10-05-alternativeto/</link>
+      <link>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</link>
       <pubDate>Sat, 05 Oct 2013 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
-      <guid>http://localhost:1313/memo/2013-10-05-alternativeto/</guid>
+      <guid>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</guid>
       <description>&lt;p&gt;MacBook Air を使うようになってから特にお世話になっている Web サービス
 &amp;ldquo;AlternativeTo&amp;rdquo;の紹介。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://alternativeto.net/&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/2013-10-05-alternativeto.png&#34; alt=&#34;AlternativeTo Logo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://alternativeto.net/&#34;&gt;&lt;img src=&#34;http://koharakazuya.github.io/images/2013-10-05-alternativeto.png&#34; alt=&#34;AlternativeTo Logo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;AlternativeTo は似たようなアプリやサービスを探してくれる Web サービスです。
 例えば&amp;rdquo;Google Chrome&amp;rdquo;で検索すると&amp;rdquo;Firefox&amp;rdquo;や&amp;rdquo;Opera&amp;rdquo;をリストアップしてくれます。
@@ -136,7 +136,7 @@ echo &amp;quot; abc&amp;quot; | grep -e $filter
 &lt;p&gt;いろんなアプリを試す方は是非どうぞ。&lt;/p&gt;
 </description>
       <images>
-        <url>http://localhost:1313/images/2013-10-05-alternativeto.png</url>
+        <url>http://koharakazuya.github.io/images/2013-10-05-alternativeto.png</url>
       </images>
     </item>
     

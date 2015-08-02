@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kohara&#39;s Page </title>
-    <link>http://localhost:1313/artifact/</link>
+    <link>http://koharakazuya.github.io/artifact/</link>
     <language>ja-jp</language>
     <author>Kohara Kazuya</author>
     
@@ -10,10 +10,10 @@
     
     <item>
       <title>Alfred 用の Todo.txt 連携ワークフローを作った</title>
-      <link>http://localhost:1313/artifact/2013-11-05-todotxtalfredworkflow/</link>
+      <link>http://koharakazuya.github.io/artifact/2013-11-05-todotxtalfredworkflow/</link>
       <pubDate>Tue, 05 Nov 2013 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
-      <guid>http://localhost:1313/artifact/2013-11-05-todotxtalfredworkflow/</guid>
+      <guid>http://koharakazuya.github.io/artifact/2013-11-05-todotxtalfredworkflow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred&lt;/a&gt; といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。
 無料版は機能制限されているんだけど、先日我慢できずにライセンスを購入。
 約 2,700 円だったけど、後悔は（まだ）していない。&lt;/p&gt;
@@ -31,7 +31,7 @@ Alfred のせっかくの機能を十分に活かしきれていなかったみ�
 &lt;p&gt;シンプルなラッパーとして&lt;code&gt;todo add test&lt;/code&gt;→通知、みたいなこともできますが、
 &lt;code&gt;add&lt;/code&gt;,&lt;code&gt;do&lt;/code&gt;,&lt;code&gt;list&lt;/code&gt;に対して特化したコマンドを追加してます。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2013-11-05-todotxtalfredworkflow.png&#34; alt=&#34;Alfred 上から Todo.txt のタスクを表示&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://koharakazuya.github.io/images/2013-11-05-todotxtalfredworkflow.png&#34; alt=&#34;Alfred 上から Todo.txt のタスクを表示&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;こんな感じに。
 &lt;code&gt;todo&lt;/code&gt;がただのラッパー。
@@ -41,7 +41,7 @@ Alfred のせっかくの機能を十分に活かしきれていなかったみ�
 
 &lt;p&gt;もし良かったら使って見て下さい。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/bin/Todo.txt.alfredworkflow&#34;&gt;&lt;em&gt;Download&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://koharakazuya.github.io/bin/Todo.txt.alfredworkflow&#34;&gt;&lt;em&gt;Download&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
       <images>
         <url>//www.alfredapp.com//images/logo.png</url>
