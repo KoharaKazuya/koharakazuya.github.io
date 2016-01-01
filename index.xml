@@ -6,7 +6,22 @@
     <language>ja-jp</language>
     <author>Kohara Kazuya</author>
     
-    <updated>Mon, 16 Nov 2015 20:25:42 JST</updated>
+    <updated>Fri, 01 Jan 2016 22:44:00 JST</updated>
+    
+    <item>
+      <title>Flux &#43; React でオセロ</title>
+      <link>http://koharakazuya.github.io/artifact/2016-01-01-flux-reversi/</link>
+      <pubDate>Fri, 01 Jan 2016 22:44:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://koharakazuya.github.io/artifact/2016-01-01-flux-reversi/</guid>
+      <description>&lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+
+&lt;script src=&#34;http://koharakazuya.github.io/js/flux-reversi.js&#34;&gt;&lt;/script&gt;
+</description>
+      <images>
+        <url>http://koharakazuya.github.io/</url>
+      </images>
+    </item>
     
     <item>
       <title>潰れた Flex の不思議な挙動</title>
