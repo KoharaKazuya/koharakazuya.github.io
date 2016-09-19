@@ -27,6 +27,17 @@
     </header>
     <main>
       
+      <a href="http://koharakazuya.github.io/artifact/2016-09-19-md2img/">
+  <article class="line-article">
+    <span class="thumbnail" style="background-image: url(https://raw.githubusercontent.com/KoharaKazuya/md2img/f3239ac8fd6ccd583e049211c14ab160218e2696/readme_assets/usage-sample.gif)"></span>
+    <div class="description">
+      <h3><span class="date">2016/9/19</span> Node パッケージ md2img を作った</h3>
+      <p>Node パッケージ md2img これは何か コマンドラインで使える Markdown ファイルを HTML レンダリングし、 画像 (PNG) のバイナリデータとして標準出力に流せるツール。 ↓ iTerm2 3.0 のインライン画像表示機能と組み合わせて利用している例を見てほしい。 レンダリングは GitHub 上の見た目と同じに目指している。 なぜ作ったか Markdown ファイルのリアルタイムプレビューができるエディタ、 WYSWIG エディタなど、プレビュー方法はいくらでもあるんだけど、 意外にプレビューしながら書くことは少ない。 ただ、コミット直前には確認しておきたいなー、と思うことがあるので わざわざそのためだけに Markdown エディタを開くのもちょっと……って思ったので。 技術的に面白かったところ PhantomJS とその node 用アダプタ phantomjs-node を触れた。 コンテンツ書き換えからアセットロード完了 (Markdown 内の画像ダウンロード) まで 待機する必要性を理解しておらず、ちょっと詰まった。 結局 PhantomJS のデバッグ方法を確立しなかったのが心残り。 (PhantomJS の node-inspector 風のサーバーへはアクセスできたが、 node-phantom だとちょっとよくわからなかった) 今までよくわかっていなかった node-gyp が何かなども調べてなんとなく理解。 GFM + GitHub の CSS に一致するように作りたかったので、Atom Markdown Preview パッケージを参考にした。 npm にパッケージ登録するのは初めて。 利用例のアニメーション gif を git 管理に入れちゃって、ダウンロードが 超重くなる落とし穴を以前に</p>
+    </div>
+  </article>
+</a>
+
+      
       <a href="http://koharakazuya.github.io/artifact/2016-01-01-flux-reversi/">
   <article class="line-article">
     <span class="thumbnail" style="background-image: url()"></span>

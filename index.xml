@@ -6,7 +6,63 @@
     <language>ja-jp</language>
     <author>Kohara Kazuya</author>
     
-    <updated>Fri, 01 Jan 2016 22:44:00 JST</updated>
+    <updated>Mon, 19 Sep 2016 19:58:00 JST</updated>
+    
+    <item>
+      <title>Node パッケージ md2img を作った</title>
+      <link>http://koharakazuya.github.io/artifact/2016-09-19-md2img/</link>
+      <pubDate>Mon, 19 Sep 2016 19:58:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://koharakazuya.github.io/artifact/2016-09-19-md2img/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://www.npmjs.com/package/md2img&#34;&gt;Node パッケージ md2img&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;これは何か:daa4a4b43cf3c4ec7514c429fa87727a&#34;&gt;これは何か&lt;/h2&gt;
+
+&lt;p&gt;コマンドラインで使える Markdown ファイルを HTML レンダリングし、
+画像 (PNG) のバイナリデータとして標準出力に流せるツール。&lt;/p&gt;
+
+&lt;p&gt;↓ iTerm2 3.0 のインライン画像表示機能と組み合わせて利用している例を見てほしい。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/KoharaKazuya/md2img/f3239ac8fd6ccd583e049211c14ab160218e2696/readme_assets/usage-sample.gif&#34; alt=&#34;使い方一例&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;レンダリングは GitHub 上の見た目と同じに目指している。&lt;/p&gt;
+
+&lt;h2 id=&#34;なぜ作ったか:daa4a4b43cf3c4ec7514c429fa87727a&#34;&gt;なぜ作ったか&lt;/h2&gt;
+
+&lt;p&gt;Markdown ファイルのリアルタイムプレビューができるエディタ、
+WYSWIG エディタなど、プレビュー方法はいくらでもあるんだけど、
+意外にプレビューしながら書くことは少ない。&lt;/p&gt;
+
+&lt;p&gt;ただ、コミット直前には確認しておきたいなー、と思うことがあるので
+わざわざそのためだけに Markdown エディタを開くのもちょっと……って思ったので。&lt;/p&gt;
+
+&lt;h2 id=&#34;技術的に面白かったところ:daa4a4b43cf3c4ec7514c429fa87727a&#34;&gt;技術的に面白かったところ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://phantomjs.org/&#34;&gt;PhantomJS&lt;/a&gt; とその node 用アダプタ &lt;a href=&#34;https://github.com/amir20/phantomjs-node&#34;&gt;phantomjs-node&lt;/a&gt; を触れた。&lt;/p&gt;
+
+&lt;p&gt;コンテンツ書き換えからアセットロード完了 (Markdown 内の画像ダウンロード) まで
+待機する必要性を理解しておらず、ちょっと詰まった。
+結局 PhantomJS のデバッグ方法を確立しなかったのが心残り。
+(PhantomJS の node-inspector 風のサーバーへはアクセスできたが、
+node-phantom だとちょっとよくわからなかった)&lt;/p&gt;
+
+&lt;p&gt;今までよくわかっていなかった node-gyp が何かなども調べてなんとなく理解。&lt;/p&gt;
+
+&lt;p&gt;GFM + GitHub の CSS に一致するように作りたかったので、Atom &lt;a href=&#34;https://atom.io/packages/markdown-preview&#34;&gt;Markdown Preview&lt;/a&gt;
+パッケージを参考にした。&lt;/p&gt;
+
+&lt;p&gt;npm にパッケージ登録するのは初めて。
+利用例のアニメーション gif を git 管理に入れちゃって、ダウンロードが
+超重くなる落とし穴を以前に Atom パッケージ公開 (&lt;a href=&#34;https://atom.io/packages/tree-view-background&#34;&gt;tree-view-background&lt;/a&gt;)
+のときに踏み抜いてたので、今回は気をつけた。
+.npmignore に追加するだけなんだけど。&lt;/p&gt;
+</description>
+      <images>
+        <url>https://raw.githubusercontent.com/KoharaKazuya/md2img/f3239ac8fd6ccd583e049211c14ab160218e2696/readme_assets/usage-sample.gif</url>
+      </images>
+    </item>
     
     <item>
       <title>Flux &#43; React でオセロ</title>
