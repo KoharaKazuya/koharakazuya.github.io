@@ -6,19 +6,19 @@
     <language>ja-jp</language>
     <author>Kohara Kazuya</author>
     
-    <updated>Mon, 19 Sep 2016 19:58:00 JST</updated>
+    <updated>Mon, 19 Sep 2016 19:58:00 &#43;0900</updated>
     
     <item>
       <title>Node パッケージ md2img を作った</title>
       <link>http://koharakazuya.github.io/artifact/2016-09-19-md2img/</link>
-      <pubDate>Mon, 19 Sep 2016 19:58:00 JST</pubDate>
+      <pubDate>Mon, 19 Sep 2016 19:58:00 &#43;0900</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/artifact/2016-09-19-md2img/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://www.npmjs.com/package/md2img&#34;&gt;Node パッケージ md2img&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;これは何か:daa4a4b43cf3c4ec7514c429fa87727a&#34;&gt;これは何か&lt;/h2&gt;
+&lt;h2 id=&#34;これは何か&#34;&gt;これは何か&lt;/h2&gt;
 
 &lt;p&gt;コマンドラインで使える Markdown ファイルを HTML レンダリングし、
 画像 (PNG) のバイナリデータとして標準出力に流せるツール。&lt;/p&gt;
@@ -29,7 +29,7 @@
 
 &lt;p&gt;レンダリングは GitHub 上の見た目と同じに目指している。&lt;/p&gt;
 
-&lt;h2 id=&#34;なぜ作ったか:daa4a4b43cf3c4ec7514c429fa87727a&#34;&gt;なぜ作ったか&lt;/h2&gt;
+&lt;h2 id=&#34;なぜ作ったか&#34;&gt;なぜ作ったか&lt;/h2&gt;
 
 &lt;p&gt;Markdown ファイルのリアルタイムプレビューができるエディタ、
 WYSWIG エディタなど、プレビュー方法はいくらでもあるんだけど、
@@ -38,7 +38,7 @@ WYSWIG エディタなど、プレビュー方法はいくらでもあるんだ�
 &lt;p&gt;ただ、コミット直前には確認しておきたいなー、と思うことがあるので
 わざわざそのためだけに Markdown エディタを開くのもちょっと……って思ったので。&lt;/p&gt;
 
-&lt;h2 id=&#34;技術的に面白かったところ:daa4a4b43cf3c4ec7514c429fa87727a&#34;&gt;技術的に面白かったところ&lt;/h2&gt;
+&lt;h2 id=&#34;技術的に面白かったところ&#34;&gt;技術的に面白かったところ&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://phantomjs.org/&#34;&gt;PhantomJS&lt;/a&gt; とその node 用アダプタ &lt;a href=&#34;https://github.com/amir20/phantomjs-node&#34;&gt;phantomjs-node&lt;/a&gt; を触れた。&lt;/p&gt;
 
@@ -67,7 +67,7 @@ node-phantom だとちょっとよくわからなかった)&lt;/p&gt;
     <item>
       <title>Flux &#43; React でオセロ</title>
       <link>http://koharakazuya.github.io/artifact/2016-01-01-flux-reversi/</link>
-      <pubDate>Fri, 01 Jan 2016 22:44:00 JST</pubDate>
+      <pubDate>Fri, 01 Jan 2016 22:44:00 &#43;0900</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/artifact/2016-01-01-flux-reversi/</guid>
       <description>&lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
@@ -82,7 +82,7 @@ node-phantom だとちょっとよくわからなかった)&lt;/p&gt;
     <item>
       <title>潰れた Flex の不思議な挙動</title>
       <link>http://koharakazuya.github.io/memo/2015-11-16-flex-width/</link>
-      <pubDate>Mon, 16 Nov 2015 20:25:42 JST</pubDate>
+      <pubDate>Mon, 16 Nov 2015 20:25:42 &#43;0900</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2015-11-16-flex-width/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div style=&amp;quot;display: flex;&amp;quot;&amp;gt;
@@ -120,7 +120,7 @@ div はならず、input だけだったのでバグっぽい感じはあるん�
     <item>
       <title>Hugo のテーマ、Hugo Shelf を作った</title>
       <link>http://koharakazuya.github.io/artifact/2015-08-02-hugo-shelf/</link>
-      <pubDate>Sun, 02 Aug 2015 23:27:31 JST</pubDate>
+      <pubDate>Sun, 02 Aug 2015 23:27:31 &#43;0900</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/artifact/2015-08-02-hugo-shelf/</guid>
       <description>&lt;p&gt;4 年前に作った自作テーマがダサく感じて 1 年ほど経過してたので、
@@ -143,12 +143,12 @@ div はならず、input だけだったのでバグっぽい感じはあるん�
     <item>
       <title>Google Chrome で新規タブで表示されるページを自作ページに置き換える方法</title>
       <link>http://koharakazuya.github.io/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 JST</pubDate>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 &#43;0900</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</guid>
       <description>
 
-&lt;h2 id=&#34;前置き:8ee40215577c19d6b74be1480b779a9a&#34;&gt;前置き&lt;/h2&gt;
+&lt;h2 id=&#34;前置き&#34;&gt;前置き&lt;/h2&gt;
 
 &lt;p&gt;Google Chrome は新しいタブを開いた時にとあるページが表示されます。
 検索ボックスがあるし最近良く使うページも表示されてそれなりに便利です。&lt;/p&gt;
@@ -169,7 +169,7 @@ div はならず、input だけだったのでバグっぽい感じはあるん�
 &lt;p&gt;じゃあ拡張にしちゃえと思って調べてみたら、思ったより簡単だったので、この記事です。
 Google Chrome は拡張が書きやすい、デバッグがしやすいという点が大好きです。&lt;/p&gt;
 
-&lt;h2 id=&#34;機能:8ee40215577c19d6b74be1480b779a9a&#34;&gt;機能&lt;/h2&gt;
+&lt;h2 id=&#34;機能&#34;&gt;機能&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Google Chrome の新規タブのページを自分で書いた HTML のページに置き換えられます&lt;/li&gt;
@@ -177,7 +177,7 @@ Google Chrome は拡張が書きやすい、デバッグがしやすいという
 &lt;li&gt;(Dropbox などを使えば同期できます)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;方法:8ee40215577c19d6b74be1480b779a9a&#34;&gt;方法&lt;/h2&gt;
+&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;自前で表示したいページ&lt;code&gt;index.html&lt;/code&gt;というファイル名で作成します&lt;/li&gt;
@@ -188,7 +188,7 @@ Google Chrome は拡張が書きやすい、デバッグがしやすいという
 &lt;li&gt;新規タブを開く&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;manifest-json:8ee40215577c19d6b74be1480b779a9a&#34;&gt;manifest.json&lt;/h3&gt;
+&lt;h3 id=&#34;manifest-json&#34;&gt;manifest.json&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;manifest_version&amp;quot;: 2,
@@ -201,7 +201,7 @@ Google Chrome は拡張が書きやすい、デバッグがしやすいという
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;説明画像:8ee40215577c19d6b74be1480b779a9a&#34;&gt;説明画像&lt;/h3&gt;
+&lt;h3 id=&#34;説明画像&#34;&gt;説明画像&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://koharakazuya.github.io/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_extension.png&#34; alt=&#34;拡張の読み込み方法の説明&#34; /&gt;&lt;/p&gt;
 </description>
@@ -213,7 +213,7 @@ Google Chrome は拡張が書きやすい、デバッグがしやすいという
     <item>
       <title>Bash での変数展開の落とし穴</title>
       <link>http://koharakazuya.github.io/memo/2013-11-07-bash-variable/</link>
-      <pubDate>Thu, 07 Nov 2013 00:00:00 JST</pubDate>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 &#43;0900</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2013-11-07-bash-variable/</guid>
       <description>&lt;p&gt;変数を使った grep の何気ないコード。&lt;/p&gt;
@@ -244,7 +244,7 @@ echo &amp;quot; abc&amp;quot; | grep -e $filter
     <item>
       <title>Alfred 用の Todo.txt 連携ワークフローを作った</title>
       <link>http://koharakazuya.github.io/artifact/2013-11-05-todotxtalfredworkflow/</link>
-      <pubDate>Tue, 05 Nov 2013 00:00:00 JST</pubDate>
+      <pubDate>Tue, 05 Nov 2013 00:00:00 &#43;0900</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/artifact/2013-11-05-todotxtalfredworkflow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred&lt;/a&gt; といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。
@@ -284,7 +284,7 @@ Alfred のせっかくの機能を十分に活かしきれていなかったみ�
     <item>
       <title>似たようなアプリ、サービスを探してくれる AlternativeTo</title>
       <link>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 JST</pubDate>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 &#43;0900</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</guid>
       <description>&lt;p&gt;MacBook Air を使うようになってから特にお世話になっている Web サービス
