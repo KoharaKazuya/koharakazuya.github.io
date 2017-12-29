@@ -1,5 +1,6 @@
 <!doctype html>
 
+<meta http-equiv="refresh" content="0;URL=https://www.koharakazuya.net/artifact/">
 <meta charset="utf-8">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/styles/header.css">
@@ -27,12 +28,73 @@
     </header>
     <main>
       
+      <a href="http://koharakazuya.github.io/artifact/2017-11-03-aws-navbar-color-by-region/">
+  <article class="line-article">
+    <span class="thumbnail" style="background-image: url(/images/2017-11-03-aws-navbar-color-by-region_ss-ap-northeast-1.png)"></span>
+    <div class="description">
+      <h3><span class="date">2017/11/3</span> AWS 管理コンソールのヘッダーをリージョン別で色分けする Stylish を作った</h3>
+      <p>こんな感じ。
+AWS マネージメントコンソールを触っている人なら必要性はわかってもらえると思う。
+色はリージョン名から機械的に作った。 似た色になって異なるリージョンを区別しづらいのが難点だが、リージョンが増えたときに頭を悩ませるのもバカバカしいのでザックリ決めた。
+インストールは Stylish ページ より。
+GitHub</p>
+    </div>
+  </article>
+</a>
+
+      
+      <a href="http://koharakazuya.github.io/artifact/2017-09-09-base122-wasm/">
+  <article class="line-article">
+    <span class="thumbnail" style="background-image: url(/images/2017-09-09-base122-wasm.svg)"></span>
+    <div class="description">
+      <h3><span class="date">2017/9/9</span> WebAssembly 手書きで base122.wasm を作った</h3>
+      <p>これは何か base122.wasm は Base-122 の encoder/decoder 実装 by WebAssembly テキスト形式。
+学習用に書捨てたコード。
+Base-122 みなさん Base-122 をご存知だろうか。 詳細はリンク先を参照してもらうとして、これを簡単に説明するなら名前からわかるように Base64 の変種だ。
+私は POSTD の翻訳記事 で知った。 初めて読んだとき、着眼点の面白さとコーディング方式のエレガントさに惚れ込んだ。私達の問題を解決するものでなくても、惚れることってあるよね……。 知らなかったら今すぐ読もう。日本語だし、明確なステップで説明が書かれている良い記事なので。
+WebAssembly みなさん WebAssembly をご存知だろうか。 こちらは注目されている技術なので知っている方は多いと思う。これを簡単に説明するなら Web でバイナリも配布して動かせれば色々メリットあるよね、という仕様だ。
+実用的な応用例はいくらでも考えられて、Unity とか WebDNN とか既に動いているらしくて「すげー」ぐらいに認識しているが、私にとっては使いたくなるシーンがなく他人事の技術だった。いつか Web フロントエンドのフレームワークのバックエンド (ややこしい……) が WebAssembly で動くようになれば、デバッグ時に読むかも、ぐらいだ。
+base122.wasm Base-122 + (手書き) WebAssembly = 「勝った」
+この組み合わせを思いついたとき、この図式が頭の中に浮かんだ。 ネタ的な面白さと勉強の題材としての丁度良さが自画自賛せざるを得なかった。
+base122.wasm が何をするかというと、Base-122 をエンコード/デコードするための API を WebAssembly テキスト形式で書く、というものだ。 出力した WebAssembly はブラウザで動き、Base-122 のエンコード/デコードができる。
+感想 WebAssembly テキスト形式 (.wat) を書いているときはツラさしかなかった。 元々、WebAssembly は C++ などの高級言語からコンパイルして出力される実行バイナリのフォーマットを決めるための仕様だ。WebAssembly テキスト形式を自分で書くというのは、言い換えればアセンブリ直書きなんだからそりゃツライ。そういったレイヤーの専門家はいるとは聞くが、私は素人なのでひたすら根気との闘いだった。</p>
+    </div>
+  </article>
+</a>
+
+      
+      <a href="http://koharakazuya.github.io/artifact/2017-07-23-forest/">
+  <article class="line-article">
+    <span class="thumbnail" style="background-image: url(/images/2017-07-23-forest_sample-output.png)"></span>
+    <div class="description">
+      <h3><span class="date">2017/7/23</span> 木構造の整形表示コマンド forest を作った</h3>
+      <p>これは何か forest は行指向で構造化された木構造を表すテキストを整形して出力するコマンド。
+pattern1_root pattern1_root/pattern2_last_leaf root_node root_node/pattern3_non-last_leaf root_node/pattern3_non-last_leaf/sample root_node/pattern3_non-last_leaf/pattern4_non-last_node's_child root_node/leaf_node  上のような入力を
+$ cat sample1.txt | forest ├ ─ pattern1_root │ └ ─ /pattern2_last_leaf └ ─ root_node ├ ─ /pattern3_non-last_leaf │ ├ ─ /sample │ └ ─ /pattern4_non-last_node's_child └ ─ /leaf_node  こんな感じに整形して出力するコマンド。
+tree コマンドのようだが、入力のテキストは / 区切りでなくともよい。行が前行に前方一致するなら、ネストする、という単純な整形をする。
+こんな感じ。
+サ サン サンプル forest forest doesn't specify any characters forest doesn't specify any characters as separater.  $ cat sample2.txt | forest ├ ─ サ │ └ ─ ン │ └ ─ プル └ ─ forest └ ─ doesn't specify any characters └ ─ as separator.</p>
+    </div>
+  </article>
+</a>
+
+      
       <a href="http://koharakazuya.github.io/artifact/2016-09-19-md2img/">
   <article class="line-article">
     <span class="thumbnail" style="background-image: url(https://raw.githubusercontent.com/KoharaKazuya/md2img/f3239ac8fd6ccd583e049211c14ab160218e2696/readme_assets/usage-sample.gif)"></span>
     <div class="description">
       <h3><span class="date">2016/9/19</span> Node パッケージ md2img を作った</h3>
-      <p>Node パッケージ md2img これは何か コマンドラインで使える Markdown ファイルを HTML レンダリングし、 画像 (PNG) のバイナリデータとして標準出力に流せるツール。 ↓ iTerm2 3.0 のインライン画像表示機能と組み合わせて利用している例を見てほしい。 レンダリングは GitHub 上の見た目と同じに目指している。 なぜ作ったか Markdown ファイルのリアルタイムプレビューができるエディタ、 WYSWIG エディタなど、プレビュー方法はいくらでもあるんだけど、 意外にプレビューしながら書くことは少ない。 ただ、コミット直前には確認しておきたいなー、と思うことがあるので わざわざそのためだけに Markdown エディタを開くのもちょっと……って思ったので。 技術的に面白かったところ PhantomJS とその node 用アダプタ phantomjs-node を触れた。 コンテンツ書き換えからアセットロード完了 (Markdown 内の画像ダウンロード) まで 待機する必要性を理解しておらず、ちょっと詰まった。 結局 PhantomJS のデバッグ方法を確立しなかったのが心残り。 (PhantomJS の node-inspector 風のサーバーへはアクセスできたが、 node-phantom だとちょっとよくわからなかった) 今までよくわかっていなかった node-gyp が何かなども調べてなんとなく理解。 GFM + GitHub の CSS に一致するように作りたかったので、Atom Markdown Preview パッケージを参考にした。 npm にパッケージ登録するのは初めて。 利用例のアニメーション gif を git 管理に入れちゃって、ダウンロードが 超重くなる落とし穴を以前に</p>
+      <p>Node パッケージ md2img
+これは何か コマンドラインで使える Markdown ファイルを HTML レンダリングし、 画像 (PNG) のバイナリデータとして標準出力に流せるツール。
+↓ iTerm2 3.0 のインライン画像表示機能と組み合わせて利用している例を見てほしい。
+レンダリングは GitHub 上の見た目と同じに目指している。
+なぜ作ったか Markdown ファイルのリアルタイムプレビューができるエディタ、 WYSWIG エディタなど、プレビュー方法はいくらでもあるんだけど、 意外にプレビューしながら書くことは少ない。
+ただ、コミット直前には確認しておきたいなー、と思うことがあるので わざわざそのためだけに Markdown エディタを開くのもちょっと……って思ったので。
+技術的に面白かったところ PhantomJS とその node 用アダプタ phantomjs-node を触れた。
+コンテンツ書き換えからアセットロード完了 (Markdown 内の画像ダウンロード) まで 待機する必要性を理解しておらず、ちょっと詰まった。 結局 PhantomJS のデバッグ方法を確立しなかったのが心残り。 (PhantomJS の node-inspector 風のサーバーへはアクセスできたが、 node-phantom だとちょっとよくわからなかった)
+今までよくわかっていなかった node-gyp が何かなども調べてなんとなく理解。
+GFM + GitHub の CSS に一致するように作りたかったので、Atom Markdown Preview パッケージを参考にした。
+npm にパッケージ登録するのは初めて。 利用例のアニメーション gif を git 管理に入れちゃって、ダウンロードが 超重くなる落とし穴を以前に Atom パッケージ公開 (tree-view-background) のときに踏み抜いてたので、今回は気をつけた。 .</p>
     </div>
   </article>
 </a>
@@ -43,7 +105,7 @@
     <span class="thumbnail" style="background-image: url()"></span>
     <div class="description">
       <h3><span class="date">2016/1/1</span> Flux &#43; React でオセロ</h3>
-      <p></p>
+      <p>  </p>
     </div>
   </article>
 </a>
@@ -54,7 +116,9 @@
     <span class="thumbnail" style="background-image: url(//gohugo.io/img/hugo.png)"></span>
     <div class="description">
       <h3><span class="date">2015/8/2</span> Hugo のテーマ、Hugo Shelf を作った</h3>
-      <p>4 年前に作った自作テーマがダサく感じて 1 年ほど経過してたので、 思い切って作りなおしました。 以前は GitHub Pages がサポートしている Jekyll を使ってましたが、ページ生成が遅いのとシンプルさに欠けるため、 Hugo に乗り換えました。 で、ついでに Hugo Shelf というテーマも作りました。 このページで使ってるテーマです。 「作ったもの」と「メモ」という分け方にしか使えないからダメですね……。</p>
+      <p>4 年前に作った自作テーマがダサく感じて 1 年ほど経過してたので、 思い切って作りなおしました。 以前は GitHub Pages がサポートしている Jekyll を使ってましたが、ページ生成が遅いのとシンプルさに欠けるため、 Hugo に乗り換えました。
+で、ついでに Hugo Shelf というテーマも作りました。 このページで使ってるテーマです。
+「作ったもの」と「メモ」という分け方にしか使えないからダメですね……。</p>
     </div>
   </article>
 </a>
@@ -65,7 +129,13 @@
     <span class="thumbnail" style="background-image: url(//www.alfredapp.com/images/logo.png)"></span>
     <div class="description">
       <h3><span class="date">2013/11/5</span> Alfred 用の Todo.txt 連携ワークフローを作った</h3>
-      <p>Alfred といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。 無料版は機能制限されているんだけど、先日我慢できずにライセンスを購入。 約 2,700 円だったけど、後悔は（まだ）していない。 せっかく買ったんだから開放された機能をガッツリ弄っていたら、Todo.txt を Alfred から操作したくなった。 Todo.txt は TODO 管理データをテキストで扱うってところが味噌のアプリ。 Web サービス利用系はサービスが終了すれば消えるし、他のバイナリでデータ管理しているアプリもエクスポートが面倒。 将来的にずっと使える保証があるのはテキストデータだけでしょ、ってことで使ってます。 なにより CLI があるのが一番ですが。 Todo.txt を扱う Alfred Workflow は既にあるっぽいですが、 Alfred のせっかくの機能を十分に活かしきれていなかったみたいなので、 自分で作ることにしました。ただのシェルスクリプトだし。 シンプルなラッパーとしてtodo add test→通知、みたいなこともできますが、 add,do,listに対して特化したコマンドを追加してます。 こんな感じに。 todoがただのラッパー。 to [task]で新規タスクの追加。 listで現在のタスクの確認。 done [task_number]でタスクの完了が出来ます。 もし良かったら使って見て下さい。 Download</p>
+      <p>Alfred といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。 無料版は機能制限されているんだけど、先日我慢できずにライセンスを購入。 約 2,700 円だったけど、後悔は（まだ）していない。
+せっかく買ったんだから開放された機能をガッツリ弄っていたら、Todo.txt を Alfred から操作したくなった。 Todo.txt は TODO 管理データをテキストで扱うってところが味噌のアプリ。 Web サービス利用系はサービスが終了すれば消えるし、他のバイナリでデータ管理しているアプリもエクスポートが面倒。 将来的にずっと使える保証があるのはテキストデータだけでしょ、ってことで使ってます。 なにより CLI があるのが一番ですが。
+Todo.txt を扱う Alfred Workflow は既にあるっぽいですが、 Alfred のせっかくの機能を十分に活かしきれていなかったみたいなので、 自分で作ることにしました。ただのシェルスクリプトだし。
+シンプルなラッパーとしてtodo add test→通知、みたいなこともできますが、 add,do,listに対して特化したコマンドを追加してます。
+こんな感じに。 todoがただのラッパー。 to [task]で新規タスクの追加。 listで現在のタスクの確認。 done [task_number]でタスクの完了が出来ます。
+もし良かったら使って見て下さい。
+Download</p>
     </div>
   </article>
 </a>

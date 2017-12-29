@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://koharakazuya.github.io/</loc>
-    <lastmod>2016-09-19T19:58:00+09:00</lastmod>
+    <loc>http://koharakazuya.github.io/artifact/2017-11-03-aws-navbar-color-by-region/</loc>
+    <lastmod>2017-11-03T12:56:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://koharakazuya.github.io/artifact/2017-09-09-base122-wasm/</loc>
+    <lastmod>2017-09-09T18:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://koharakazuya.github.io/artifact/2017-07-23-forest/</loc>
+    <lastmod>2017-07-23T21:29:00+09:00</lastmod>
   </url>
   
   <url>
@@ -44,6 +55,34 @@
   <url>
     <loc>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</loc>
     <lastmod>2013-10-05T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://koharakazuya.github.io/artifact/</loc>
+    <lastmod>2017-11-03T12:56:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://koharakazuya.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://koharakazuya.github.io/</loc>
+    <lastmod>2017-11-03T12:56:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://koharakazuya.github.io/memo/</loc>
+    <lastmod>2015-11-16T20:25:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://koharakazuya.github.io/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>

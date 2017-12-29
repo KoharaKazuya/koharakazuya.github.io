@@ -6,12 +6,12 @@
     <language>ja-jp</language>
     <author>Kohara Kazuya</author>
     
-    <updated>Mon, 16 Nov 2015 20:25:42 &#43;0900</updated>
+    <updated>Mon, 16 Nov 2015 20:25:42 JST</updated>
     
     <item>
       <title>潰れた Flex の不思議な挙動</title>
       <link>http://koharakazuya.github.io/memo/2015-11-16-flex-width/</link>
-      <pubDate>Mon, 16 Nov 2015 20:25:42 &#43;0900</pubDate>
+      <pubDate>Mon, 16 Nov 2015 20:25:42 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2015-11-16-flex-width/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div style=&amp;quot;display: flex;&amp;quot;&amp;gt;
@@ -49,7 +49,7 @@ div はならず、input だけだったのでバグっぽい感じはあるん�
     <item>
       <title>Google Chrome で新規タブで表示されるページを自作ページに置き換える方法</title>
       <link>http://koharakazuya.github.io/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 &#43;0900</pubDate>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</guid>
       <description>
@@ -119,7 +119,7 @@ Google Chrome は拡張が書きやすい、デバッグがしやすいという
     <item>
       <title>Bash での変数展開の落とし穴</title>
       <link>http://koharakazuya.github.io/memo/2013-11-07-bash-variable/</link>
-      <pubDate>Thu, 07 Nov 2013 00:00:00 &#43;0900</pubDate>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2013-11-07-bash-variable/</guid>
       <description>&lt;p&gt;変数を使った grep の何気ないコード。&lt;/p&gt;
@@ -150,7 +150,7 @@ echo &amp;quot; abc&amp;quot; | grep -e $filter
     <item>
       <title>似たようなアプリ、サービスを探してくれる AlternativeTo</title>
       <link>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 &#43;0900</pubDate>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</guid>
       <description>&lt;p&gt;MacBook Air を使うようになってから特にお世話になっている Web サービス

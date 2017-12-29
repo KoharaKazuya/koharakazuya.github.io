@@ -6,12 +6,231 @@
     <language>ja-jp</language>
     <author>Kohara Kazuya</author>
     
-    <updated>Mon, 19 Sep 2016 19:58:00 &#43;0900</updated>
+    <updated>Fri, 03 Nov 2017 12:56:00 JST</updated>
+    
+    <item>
+      <title>AWS 管理コンソールのヘッダーをリージョン別で色分けする Stylish を作った</title>
+      <link>http://koharakazuya.github.io/artifact/2017-11-03-aws-navbar-color-by-region/</link>
+      <pubDate>Fri, 03 Nov 2017 12:56:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://koharakazuya.github.io/artifact/2017-11-03-aws-navbar-color-by-region/</guid>
+      <description>&lt;p&gt;こんな感じ。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://koharakazuya.github.io/images/2017-11-03-aws-navbar-color-by-region_ss-ap-northeast-1.png&#34; alt=&#34;ss-ap-northeast-1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://koharakazuya.github.io/images/2017-11-03-aws-navbar-color-by-region_ss-us-east-1.png&#34; alt=&#34;ss-us-east-1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://koharakazuya.github.io/images/2017-11-03-aws-navbar-color-by-region_ss-us-east-2.png&#34; alt=&#34;ss-us-east-2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;AWS マネージメントコンソールを触っている人なら必要性はわかってもらえると思う。&lt;/p&gt;
+
+&lt;p&gt;色はリージョン名から機械的に作った。
+似た色になって異なるリージョンを区別しづらいのが難点だが、リージョンが増えたときに頭を悩ませるのもバカバカしいのでザックリ決めた。&lt;/p&gt;
+
+&lt;p&gt;インストールは &lt;a href=&#34;https://userstyles.org/styles/150583/aws-navbar-color-by-region&#34;&gt;Stylish ページ&lt;/a&gt; より。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/KoharaKazuya/aws-navbar-color-by-region&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+</description>
+      <images>
+        <url>http://koharakazuya.github.io/images/2017-11-03-aws-navbar-color-by-region_ss-ap-northeast-1.png</url>
+      </images>
+    </item>
+    
+    <item>
+      <title>WebAssembly 手書きで base122.wasm を作った</title>
+      <link>http://koharakazuya.github.io/artifact/2017-09-09-base122-wasm/</link>
+      <pubDate>Sat, 09 Sep 2017 18:00:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://koharakazuya.github.io/artifact/2017-09-09-base122-wasm/</guid>
+      <description>
+
+&lt;h2 id=&#34;これは何か&#34;&gt;これは何か&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/KoharaKazuya/base122.wasm&#34;&gt;base122.wasm&lt;/a&gt; は Base-122 の encoder/decoder 実装 by WebAssembly テキスト形式。&lt;/p&gt;
+
+&lt;p&gt;学習用に書捨てたコード。&lt;/p&gt;
+
+&lt;h2 id=&#34;base-122&#34;&gt;Base-122&lt;/h2&gt;
+
+&lt;p&gt;みなさん &lt;a href=&#34;http://blog.kevinalbs.com/base122&#34;&gt;Base-122&lt;/a&gt; をご存知だろうか。
+詳細はリンク先を参照してもらうとして、これを簡単に説明するなら名前からわかるように Base64 の変種だ。&lt;/p&gt;
+
+&lt;p&gt;私は &lt;a href=&#34;http://postd.cc/base122/&#34;&gt;POSTD の翻訳記事&lt;/a&gt; で知った。
+初めて読んだとき、着眼点の面白さとコーディング方式のエレガントさに惚れ込んだ。私達の問題を解決するものでなくても、惚れることってあるよね……。
+知らなかったら今すぐ読もう。日本語だし、明確なステップで説明が書かれている良い記事なので。&lt;/p&gt;
+
+&lt;h2 id=&#34;webassembly&#34;&gt;WebAssembly&lt;/h2&gt;
+
+&lt;p&gt;みなさん &lt;a href=&#34;http://webassembly.org/&#34;&gt;WebAssembly&lt;/a&gt; をご存知だろうか。
+こちらは注目されている技術なので知っている方は多いと思う。これを簡単に説明するなら Web でバイナリも配布して動かせれば色々メリットあるよね、という仕様だ。&lt;/p&gt;
+
+&lt;p&gt;実用的な応用例はいくらでも考えられて、Unity とか WebDNN とか既に動いているらしくて「すげー」ぐらいに認識しているが、私にとっては使いたくなるシーンがなく他人事の技術だった。いつか Web フロントエンドのフレームワークのバックエンド (ややこしい……) が WebAssembly で動くようになれば、デバッグ時に読むかも、ぐらいだ。&lt;/p&gt;
+
+&lt;h2 id=&#34;base122-wasm&#34;&gt;base122.wasm&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Base-122&lt;/strong&gt; + &lt;strong&gt;(手書き) WebAssembly&lt;/strong&gt; = &lt;strong&gt;「勝った」&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;この組み合わせを思いついたとき、この図式が頭の中に浮かんだ。
+ネタ的な面白さと勉強の題材としての丁度良さが自画自賛せざるを得なかった。&lt;/p&gt;
+
+&lt;p&gt;base122.wasm が何をするかというと、Base-122 をエンコード/デコードするための API を WebAssembly テキスト形式で書く、というものだ。
+出力した WebAssembly はブラウザで動き、Base-122 のエンコード/デコードができる。&lt;/p&gt;
+
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;WebAssembly テキスト形式 (.wat) を書いているときはツラさしかなかった。
+元々、WebAssembly は C++ などの高級言語からコンパイルして出力される実行バイナリのフォーマットを決めるための仕様だ。WebAssembly テキスト形式を自分で書くというのは、言い換えればアセンブリ直書きなんだからそりゃツライ。そういったレイヤーの専門家はいるとは聞くが、私は素人なのでひたすら根気との闘いだった。&lt;/p&gt;
+
+&lt;p&gt;言い換えれば根気があれば普通に書ける。
+他の CPU 命令や VM を知らないのでイメージでしか語れないが、WebAssembly の仕様は (現状) 非常に小さい。データ型は i32, i64, f32, f64 の 4 種しかなく、命令もサラッと読めてしまう程度のものしかない (その後 LLVM IR のフォーマットを読もうとして腰を抜かした)。
+なんでそうなっているか、みたいな話も &lt;a href=&#34;http://webassembly.org/docs/rationale/&#34;&gt;まとめられてて&lt;/a&gt; 面白そうだが、専門外の領域なので読んでもよくわからない部分が多かった。&lt;/p&gt;
+
+&lt;p&gt;やって良かった点が、なぜグルーコードと呼ばれるものが必要なのか、というのが肌で感じられたことだった。
+手を動かさなくても仕様をしっかり理解していればわかることだろうけど、手を動かすのが最も仕様を理解するモチベーションになるので。
+グルーコードというのは WebAssembly と JavaScript を橋渡しするもの。上記通り WebAssembly にはデータ型が数値 4 種しかないため、WebAssembly で文字列を扱いたい、となっても素の WebAssembly が公開する関数は文字列を返せない。両方から触れるメモリ空間を利用したりしてやりとりするわけだけど、その変換をしたりする。その他、DOM を触ったり WebGL を呼び出したりは全部グルーコード (JavaScript) のお仕事。
+今まで Emscripten で WebAssembly を出力するとなんで一緒に JavaScript がくっついてくるんだ、と謎に思っていたがわかってよかった。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;base122.wasm を書いた&lt;/li&gt;
+&lt;li&gt;Base-122 が魅力的なので読んで&lt;/li&gt;
+&lt;li&gt;WebAssembly 手書きは根気でなんとかやれる&lt;/li&gt;
+&lt;li&gt;WebAssembly ではグルーコード (JavaScript) が必要&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      <images>
+        <url>http://koharakazuya.github.io/images/2017-09-09-base122-wasm.svg</url>
+      </images>
+    </item>
+    
+    <item>
+      <title>木構造の整形表示コマンド forest を作った</title>
+      <link>http://koharakazuya.github.io/artifact/2017-07-23-forest/</link>
+      <pubDate>Sun, 23 Jul 2017 21:29:00 JST</pubDate>
+      <author>Kohara Kazuya</author>
+      <guid>http://koharakazuya.github.io/artifact/2017-07-23-forest/</guid>
+      <description>
+
+&lt;h2 id=&#34;これは何か&#34;&gt;これは何か&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/KoharaKazuya/forest&#34;&gt;forest&lt;/a&gt; は行指向で構造化された木構造を表すテキストを整形して出力するコマンド。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pattern1_root
+pattern1_root/pattern2_last_leaf
+root_node
+root_node/pattern3_non-last_leaf
+root_node/pattern3_non-last_leaf/sample
+root_node/pattern3_non-last_leaf/pattern4_non-last_node&#39;s_child
+root_node/leaf_node
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上のような入力を&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ cat sample1.txt | forest
+├ ─ pattern1_root
+│   └ ─ /pattern2_last_leaf
+└ ─ root_node
+    ├ ─ /pattern3_non-last_leaf
+    │   ├ ─ /sample
+    │   └ ─ /pattern4_non-last_node&#39;s_child
+    └ ─ /leaf_node
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな感じに整形して出力するコマンド。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tree&lt;/code&gt; コマンドのようだが、入力のテキストは &lt;code&gt;/&lt;/code&gt; 区切りでなくともよい。行が前行に前方一致するなら、ネストする、という単純な整形をする。&lt;/p&gt;
+
+&lt;p&gt;こんな感じ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;サ
+サン
+サンプル
+forest
+forest doesn&#39;t specify any characters
+forest doesn&#39;t specify any characters as separater.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ cat sample2.txt | forest
+├ ─ サ
+│   └ ─ ン
+│       └ ─ プル
+└ ─ forest
+    └ ─  doesn&#39;t specify any characters
+        └ ─  as separator.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;なぜ作ったか&#34;&gt;なぜ作ったか&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;find&lt;/code&gt; コマンドの柔軟な検索結果を &lt;code&gt;tree&lt;/code&gt; コマンドのようなツリー表示で見たいなー、と思ったのがキッカケ。
+この問題を解決するツールはあるだろうけど、そもそも整形表示部分だけの単機能にした方がいいんじゃないの、アレ？そういうコマンドないの？と思ったので。&lt;/p&gt;
+
+&lt;p&gt;それと Rust の勉強がてら。&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
+
+&lt;p&gt;パイプでつなげるだけ。オプションなし！&lt;/p&gt;
+
+&lt;p&gt;ダウンロードは &lt;a href=&#34;https://github.com/KoharaKazuya/forest&#34;&gt;GitHub&lt;/a&gt; より&lt;/p&gt;
+
+&lt;p&gt;Linux と macOS のバイナリをビルドしてます。&lt;/p&gt;
+
+&lt;h2 id=&#34;実装で面白かった点&#34;&gt;実装で面白かった点&lt;/h2&gt;
+
+&lt;h3 id=&#34;アルゴリズム&#34;&gt;アルゴリズム&lt;/h3&gt;
+
+&lt;p&gt;最初は木構造を整形表示するなんて楽勝じゃね？と思ってたが、以外に難しかった。というのも、&lt;code&gt;tree&lt;/code&gt; の表示の再現をしようとすると、親ノードが下の兄弟を持つかどうかで行の出力が変わるからだ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;├ parent
+│ └ child
+└ (ここがいるかいないかで child の先頭部分 │ の有無が変わる)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;└ parent
+  └ child
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これがあるため、単純に前から入力を読んでいくだけでは出力を決定できない。(これがあるので、入力を読み終えるまで &lt;code&gt;forest&lt;/code&gt; は何も出力しない。ノードの深さによっては一部出力可能だが、本質的にはできないので対応していない)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tree&lt;/code&gt; はファイルシステムへのアクセスの結果なので、ディレクトリエントリを読んだ時点で兄弟の有無が判明するはずなので、&lt;strong&gt;恐らく&lt;/strong&gt; この問題は発生しない。&lt;code&gt;tree&lt;/code&gt; の実装読んでないので予想。&lt;/p&gt;
+
+&lt;p&gt;内部で &lt;code&gt;tree&lt;/code&gt; を全て組み立ててから出力するというのは、避けられないんだけど、読み書きをストリーム状に (= 戻りなく) 処理したいという気持ちがあったのでアルゴリズムを多少工夫した。&lt;/p&gt;
+
+&lt;p&gt;アルゴリズムを &lt;a href=&#34;https://github.com/KoharaKazuya/forest&#34;&gt;README.md&lt;/a&gt; に擬似コードで載せてある。手前味噌だがいい感じになっていると思う。もっと言えば、この &lt;code&gt;forest&lt;/code&gt; の価値はアルゴリズムが全てと言ってもいいんじゃないか？言いたい。&lt;/p&gt;
+
+&lt;h3 id=&#34;rust-の言語仕様&#34;&gt;Rust の言語仕様&lt;/h3&gt;
+
+&lt;p&gt;私には Rust 難しいです！！！！！&lt;/p&gt;
+
+&lt;p&gt;書いてて実感するのが、参照さえ手に入れば書き換えられるというマインドを植え付けられてるなーと。Haskell では感じないからシンタックスの問題なんだろうけど。所有権の考え方は早く慣れたい。どの言語でも役に立つ気しかしない。&lt;/p&gt;
+
+&lt;p&gt;木構造を実装しようとしたとき、子と親の両方の参照を埋め込もうとしたら循環参照じゃないか、所有権どうするの！？となって発見があった。
+&lt;code&gt;forest&lt;/code&gt; では妥協で回避している。スマートポインタをちゃんと使いこなせるようにならないと。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;forest&lt;/code&gt; の実装の範囲内だと Rust の特色が全く出ていない。Rust はこわくない、ということ学べた程度だった。&lt;/p&gt;
+
+&lt;h3 id=&#34;rust-のビルド&#34;&gt;Rust のビルド&lt;/h3&gt;
+
+&lt;p&gt;ダイナミックリンクで苦労した。
+私は真面目に C/C++ をビルドしたことがないので、&lt;code&gt;libc&lt;/code&gt; ってなんじゃボケーッって言いながらバイナリ作成を頑張った。&lt;/p&gt;
+
+&lt;p&gt;TravisCI 上の Ubuntu がリンクしたバージョンの glibc が CentOS 上のものが古くて実行できないなど。&lt;/p&gt;
+
+&lt;p&gt;各ディストリビューション向けに配布ファイルを作るのは面倒くさくて嫌だったので、全て静的リンクするように Rust MUSL ターゲットを使った。&lt;/p&gt;
+
+&lt;h2 id=&#34;終わりに&#34;&gt;終わりに&lt;/h2&gt;
+
+&lt;p&gt;「forest はこんなところで活用できるよ」と教えてくれると嬉しいです。&lt;/p&gt;
+</description>
+      <images>
+        <url>http://koharakazuya.github.io/images/2017-07-23-forest_sample-output.png</url>
+      </images>
+    </item>
     
     <item>
       <title>Node パッケージ md2img を作った</title>
       <link>http://koharakazuya.github.io/artifact/2016-09-19-md2img/</link>
-      <pubDate>Mon, 19 Sep 2016 19:58:00 &#43;0900</pubDate>
+      <pubDate>Mon, 19 Sep 2016 19:58:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/artifact/2016-09-19-md2img/</guid>
       <description>
@@ -67,7 +286,7 @@ node-phantom だとちょっとよくわからなかった)&lt;/p&gt;
     <item>
       <title>Flux &#43; React でオセロ</title>
       <link>http://koharakazuya.github.io/artifact/2016-01-01-flux-reversi/</link>
-      <pubDate>Fri, 01 Jan 2016 22:44:00 &#43;0900</pubDate>
+      <pubDate>Fri, 01 Jan 2016 22:44:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/artifact/2016-01-01-flux-reversi/</guid>
       <description>&lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
@@ -82,7 +301,7 @@ node-phantom だとちょっとよくわからなかった)&lt;/p&gt;
     <item>
       <title>潰れた Flex の不思議な挙動</title>
       <link>http://koharakazuya.github.io/memo/2015-11-16-flex-width/</link>
-      <pubDate>Mon, 16 Nov 2015 20:25:42 &#43;0900</pubDate>
+      <pubDate>Mon, 16 Nov 2015 20:25:42 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2015-11-16-flex-width/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div style=&amp;quot;display: flex;&amp;quot;&amp;gt;
@@ -120,7 +339,7 @@ div はならず、input だけだったのでバグっぽい感じはあるん�
     <item>
       <title>Hugo のテーマ、Hugo Shelf を作った</title>
       <link>http://koharakazuya.github.io/artifact/2015-08-02-hugo-shelf/</link>
-      <pubDate>Sun, 02 Aug 2015 23:27:31 &#43;0900</pubDate>
+      <pubDate>Sun, 02 Aug 2015 23:27:31 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/artifact/2015-08-02-hugo-shelf/</guid>
       <description>&lt;p&gt;4 年前に作った自作テーマがダサく感じて 1 年ほど経過してたので、
@@ -143,7 +362,7 @@ div はならず、input だけだったのでバグっぽい感じはあるん�
     <item>
       <title>Google Chrome で新規タブで表示されるページを自作ページに置き換える方法</title>
       <link>http://koharakazuya.github.io/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 &#43;0900</pubDate>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2014-01-14-how-to-replace-new-tab-page-with-your-page/</guid>
       <description>
@@ -213,7 +432,7 @@ Google Chrome は拡張が書きやすい、デバッグがしやすいという
     <item>
       <title>Bash での変数展開の落とし穴</title>
       <link>http://koharakazuya.github.io/memo/2013-11-07-bash-variable/</link>
-      <pubDate>Thu, 07 Nov 2013 00:00:00 &#43;0900</pubDate>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2013-11-07-bash-variable/</guid>
       <description>&lt;p&gt;変数を使った grep の何気ないコード。&lt;/p&gt;
@@ -244,7 +463,7 @@ echo &amp;quot; abc&amp;quot; | grep -e $filter
     <item>
       <title>Alfred 用の Todo.txt 連携ワークフローを作った</title>
       <link>http://koharakazuya.github.io/artifact/2013-11-05-todotxtalfredworkflow/</link>
-      <pubDate>Tue, 05 Nov 2013 00:00:00 &#43;0900</pubDate>
+      <pubDate>Tue, 05 Nov 2013 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/artifact/2013-11-05-todotxtalfredworkflow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred&lt;/a&gt; といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。
@@ -284,7 +503,7 @@ Alfred のせっかくの機能を十分に活かしきれていなかったみ�
     <item>
       <title>似たようなアプリ、サービスを探してくれる AlternativeTo</title>
       <link>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 &#43;0900</pubDate>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 JST</pubDate>
       <author>Kohara Kazuya</author>
       <guid>http://koharakazuya.github.io/memo/2013-10-05-alternativeto/</guid>
       <description>&lt;p&gt;MacBook Air を使うようになってから特にお世話になっている Web サービス

@@ -1,5 +1,6 @@
 <!doctype html>
 
+<meta http-equiv="refresh" content="0;URL=https://www.koharakazuya.net/memo/">
 <meta charset="utf-8">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/styles/header.css">
@@ -32,7 +33,10 @@
     <span class="thumbnail" style="background-image: url()"></span>
     <div class="description">
       <h3><span class="date">2015/11/16</span> 潰れた Flex の不思議な挙動</h3>
-      <p>&lt;div style=&quot;display: flex;&quot;&gt; &lt;input style=&quot;flex: 1;&quot;&gt; &lt;div style=&quot;flex: 0 1 600px; background-color: green;&quot;&gt;&lt;/div&gt; &lt;/div&gt; 上記のコードでは、右の緑の領域が基本 600 px あって、左の入力欄は残りの部分で 伸縮する、また、（ブラウザサイズなどの）全体の幅が小さくなるに連れ、 入力欄が小さくなり、幅が 0 になると右の緑の領域の幅が小さくなっていく。 という意図で書いた。 実際は以下。 PC でブラウザのウィンドウサイズを色々変えてみて試してほしい。 Safari, FireFox では意図の通りの挙動をしたが、 Google Chrome 46 では 入力欄の幅が 0 になる付近で固定幅になる という謎の 挙動を示した。ホント謎。 div はならず、input だけだったのでバグっぽい感じはあるんだけど、どうなんだろう。 （この記事は仕事中に苦しんだバグを再現しようと思って書き始められましたが、 再現ができずに別のバグっぽいものを見つけたため、そちらが記されました）</p>
+      <p>&lt;div style=&quot;display: flex;&quot;&gt; &lt;input style=&quot;flex: 1;&quot;&gt; &lt;div style=&quot;flex: 0 1 600px; background-color: green;&quot;&gt;&lt;/div&gt; &lt;/div&gt;  上記のコードでは、右の緑の領域が基本 600 px あって、左の入力欄は残りの部分で 伸縮する、また、（ブラウザサイズなどの）全体の幅が小さくなるに連れ、 入力欄が小さくなり、幅が 0 になると右の緑の領域の幅が小さくなっていく。 という意図で書いた。
+実際は以下。 PC でブラウザのウィンドウサイズを色々変えてみて試してほしい。
+  Safari, FireFox では意図の通りの挙動をしたが、 Google Chrome 46 では 入力欄の幅が 0 になる付近で固定幅になる という謎の 挙動を示した。ホント謎。 div はならず、input だけだったのでバグっぽい感じはあるんだけど、どうなんだろう。
+（この記事は仕事中に苦しんだバグを再現しようと思って書き始められましたが、 再現ができずに別のバグっぽいものを見つけたため、そちらが記されました）</p>
     </div>
   </article>
 </a>
@@ -43,7 +47,12 @@
     <span class="thumbnail" style="background-image: url(/images/2014-01-14-how-to-replace-new-tab-page-with-your-page_default.png)"></span>
     <div class="description">
       <h3><span class="date">2014/1/14</span> Google Chrome で新規タブで表示されるページを自作ページに置き換える方法</h3>
-      <p>前置き Google Chrome は新しいタブを開いた時にとあるページが表示されます。 検索ボックスがあるし最近良く使うページも表示されてそれなりに便利です。 しかしカスタマイズしたいと思うのがお年頃。 Speed dial 2 などのカスタマイズできる拡張はあるけれど、もっともっと深いところまでカスタマイズしたい、そう思うのは僕だけでしょうか？ 色々な拡張を試しました。 どれも手軽に利用できて、カッコイイし、便利なんだけどもちょっとずつ不満がありました。 上記の Speed dial 2 が一番利用したかったんだけど、同期機能は有料なんですよねー。 そうだ、自分で HTML 書けばいいじゃないか！ と思い至り、Dropbox + New Tab Redirect! で同期できる自分好みのページに置き換えました。 しかしコレにも欠点が。 検索に利用するオムニボックス (上部の URL が表示されるところ) に余計な URL が残っちゃうんです。 じゃあ拡張にしちゃえと思って調べてみたら、思ったより簡単だったので、この記事です。 Google Chrome は拡張が書きやすい、デバッグがしやすいという点が大好きです。 機能 Google Chrome の新規タブのページを自分で書いた HTML のページに置き換えられます オムニボックスに余計な URL は表示されません (Dropbox などを使えば同期できます) 方法 自前で表示したいページindex.htmlというファイル名で作成します 作ったファイルを適当なディレクトリにつっこみます (Dropbox なんかがおすすめ) そのディレクトリ直下に下記のファイルをmanifest.jsonというファイル名で保存します Google Chrome の拡張機能のページ (chrome://extensions) からディベロッパーモードを選択 「パッケージ化されていない拡張機能を読み込む」で作ったディレクトリを選択 新規タブを開く manifest.json { &quot;manifest_version&quot;: 2, &quot;name&quot;: &quot;My customized new</p>
+      <p>前置き Google Chrome は新しいタブを開いた時にとあるページが表示されます。 検索ボックスがあるし最近良く使うページも表示されてそれなりに便利です。
+しかしカスタマイズしたいと思うのがお年頃。 Speed dial 2 などのカスタマイズできる拡張はあるけれど、もっともっと深いところまでカスタマイズしたい、そう思うのは僕だけでしょうか？
+色々な拡張を試しました。 どれも手軽に利用できて、カッコイイし、便利なんだけどもちょっとずつ不満がありました。 上記の Speed dial 2 が一番利用したかったんだけど、同期機能は有料なんですよねー。
+そうだ、自分で HTML 書けばいいじゃないか！ と思い至り、Dropbox + New Tab Redirect! で同期できる自分好みのページに置き換えました。 しかしコレにも欠点が。 検索に利用するオムニボックス (上部の URL が表示されるところ) に余計な URL が残っちゃうんです。
+じゃあ拡張にしちゃえと思って調べてみたら、思ったより簡単だったので、この記事です。 Google Chrome は拡張が書きやすい、デバッグがしやすいという点が大好きです。
+機能  Google Chrome の新規タブのページを自分で書いた HTML のページに置き換えられます オムニボックスに余計な URL は表示されません (Dropbox などを使えば同期できます)  方法  自前で表示したいページindex.htmlというファイル名で作成します 作ったファイルを適当なディレクトリにつっこみます (Dropbox なんかがおすすめ) そのディレクトリ直下に下記のファイルをmanifest.jsonというファイル名で保存します Google Chrome の拡張機能のページ (chrome://extensions) からディベロッパーモードを選択 「パッケージ化されていない拡張機能を読み込む」で作ったディレクトリを選択 新規タブを開く  manifest.json { &quot;manifest_version&quot;: 2, &quot;name&quot;: &quot;My customized new tab page&quot;, &quot;description&quot;: &quot;Override the new tab page with my page&quot;, &quot;version&quot;: &quot;0.</p>
     </div>
   </article>
 </a>
@@ -54,7 +63,11 @@
     <span class="thumbnail" style="background-image: url(/images/2013-11-07-bash-variable.png)"></span>
     <div class="description">
       <h3><span class="date">2013/11/7</span> Bash での変数展開の落とし穴</h3>
-      <p>変数を使った grep の何気ないコード。 filter='&quot;^ abc&quot;' echo &quot; abc&quot; | grep -e $filter 何事も無く、abcと出力されるかとおもいきや何も出力されない。 さっきこれにハマった。 このスクリプトの二行目、$filterを展開するとecho &quot; abc&quot; | grep -e &quot;^ abc&quot;となるように見える。 だから grep の引数には^ abcが渡されているはず、と思い込んでいたのだが実は違うらしい。 実際は&quot;^とabc&quot;が渡されている（もちろん-eも）。 シェルがダブルクォーテーションを処理していない。 他にもバックスラッシュや（恐らく）ワイルドカードなども処理されない。 なんなんだーと思うけど、ダブルクォーテーションやバックスラッシュの処理は 変数展開の前に行うのだろうと推測。 素直にeval使いましょう。</p>
+      <p>変数を使った grep の何気ないコード。
+filter='&quot;^ abc&quot;' echo &quot; abc&quot; | grep -e $filter  何事も無く、abcと出力されるかとおもいきや何も出力されない。 さっきこれにハマった。
+このスクリプトの二行目、$filterを展開するとecho &quot; abc&quot; | grep -e &quot;^ abc&quot;となるように見える。 だから grep の引数には^ abcが渡されているはず、と思い込んでいたのだが実は違うらしい。 実際は&quot;^とabc&quot;が渡されている（もちろん-eも）。 シェルがダブルクォーテーションを処理していない。 他にもバックスラッシュや（恐らく）ワイルドカードなども処理されない。
+なんなんだーと思うけど、ダブルクォーテーションやバックスラッシュの処理は 変数展開の前に行うのだろうと推測。
+素直にeval使いましょう。</p>
     </div>
   </article>
 </a>
@@ -65,7 +78,12 @@
     <span class="thumbnail" style="background-image: url(/images/2013-10-05-alternativeto.png)"></span>
     <div class="description">
       <h3><span class="date">2013/10/5</span> 似たようなアプリ、サービスを探してくれる AlternativeTo</h3>
-      <p>MacBook Air を使うようになってから特にお世話になっている Web サービス &ldquo;AlternativeTo&rdquo;の紹介。 AlternativeTo は似たようなアプリやサービスを探してくれる Web サービスです。 例えば&rdquo;Google Chrome&rdquo;で検索すると&rdquo;Firefox&rdquo;や&rdquo;Opera&rdquo;をリストアップしてくれます。 これがどういう時に便利かというと、あるアプリが便利そう！と思った時に、 導入する前に AlternativeTo でサクッと調べて同様のもっと自分にあったアプリが ないか調べられます。 自分は特に Windows から Mac に移行した際に 「Windows ならこういうアプリが便利だったなぁ」 と思った時に調べられて便利でした。 OS 別や無料かどうかで絞込ができ、更に&rdquo;like&rdquo;の数でソートができるので、 使い勝手はかなりいいです。 いろんなアプリを試す方は是非どうぞ。</p>
+      <p>MacBook Air を使うようになってから特にお世話になっている Web サービス &ldquo;AlternativeTo&rdquo;の紹介。
+
+AlternativeTo は似たようなアプリやサービスを探してくれる Web サービスです。 例えば&rdquo;Google Chrome&rdquo;で検索すると&rdquo;Firefox&rdquo;や&rdquo;Opera&rdquo;をリストアップしてくれます。 これがどういう時に便利かというと、あるアプリが便利そう！と思った時に、 導入する前に AlternativeTo でサクッと調べて同様のもっと自分にあったアプリが ないか調べられます。
+自分は特に Windows から Mac に移行した際に 「Windows ならこういうアプリが便利だったなぁ」 と思った時に調べられて便利でした。
+OS 別や無料かどうかで絞込ができ、更に&rdquo;like&rdquo;の数でソートができるので、 使い勝手はかなりいいです。
+いろんなアプリを試す方は是非どうぞ。</p>
     </div>
   </article>
 </a>
